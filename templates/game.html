@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title>Pick Madlibs</title>
+  <h1>Glad you decided to play a game!</h1>
+  <br>
+  <h1>Please pick a noun, color, adjecive, and person from the drop lists.</h1>
+</head>
+<body>
+    <br>   
+    <form action="/madlibs"> 
+            <label for="noun-select">Noun</label>
+            <select name="noun" id="noun-select">
+                {% for noun in nouns%}
+                <option value="{{noun}}">{{noun}}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <label for="color-select">Color</label>
+            <select name="color" id="color-select">
+                {% for color in colors%}
+                <option value="{{color}}">{{color}}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <label for="adjective-select">Adjective</label>
+            <select name="adjective" id="adjective-select">
+                {% for adjective in adjectives %}
+                <option value="{{adjective}}">{{adjective}}</option>
+                {% endfor %} 
+            </select>
+            <br>
+            <label for="people-select">Person</label>
+            <select name="people" id="people-select">
+                {% for people in peoples %}
+                <option value="{{people}}">{{people}}</option>
+                {% endfor %}
+            </select>
+            <br>
+        <input type ="submit">
+        
+    </form>
+
+    
+</body>
+</html>
